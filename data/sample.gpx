@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="DriverTour" xmlns="http://www.topografix.com/GPX/1/1">
+  <trk>
+    <name>Champaign to Urbana drive</name>
+    <trkseg>
+      <trkpt lat="40.116400" lon="-88.243400"><ele>223.5</ele><time>2026-09-28T15:00:00Z</time></trkpt>
+      <trkpt lat="40.116379" lon="-88.242191"><ele>222.7</ele><time>2026-09-28T15:00:10Z</time></trkpt>
+      <trkpt lat="40.116402" lon="-88.241008"><ele>222.7</ele><time>2026-09-28T15:00:20Z</time></trkpt>
+      <trkpt lat="40.116400" lon="-88.239828"><ele>223.8</ele><time>2026-09-28T15:00:30Z</time></trkpt>
+      <trkpt lat="40.116374" lon="-88.238625"><ele>223.8</ele><time>2026-09-28T15:00:40Z</time></trkpt>
+      <trkpt lat="40.116420" lon="-88.237423"><ele>223.2</ele><time>2026-09-28T15:00:50Z</time></trkpt>
+      <trkpt lat="40.116408" lon="-88.236173"><ele>224.2</ele><time>2026-09-28T15:01:00Z</time></trkpt>
+      <trkpt lat="40.116394" lon="-88.234971"><ele>222.6</ele><time>2026-09-28T15:01:10Z</time></trkpt>
+      <trkpt lat="40.116422" lon="-88.233813"><ele>222.9</ele><time>2026-09-28T15:01:20Z</time></trkpt>
+      <trkpt lat="40.116377" lon="-88.232611"><ele>224.9</ele><time>2026-09-28T15:01:30Z</time></trkpt>
+      <trkpt lat="40.116381" lon="-88.231395"><ele>224.4</ele><time>2026-09-28T15:01:40Z</time></trkpt>
+      <trkpt lat="40.116392" lon="-88.230197"><ele>222.7</ele><time>2026-09-28T15:01:50Z</time></trkpt>
+      <trkpt lat="40.116374" lon="-88.229018"><ele>224.5</ele><time>2026-09-28T15:02:00Z</time></trkpt>
+      <trkpt lat="40.115510" lon="-88.229011"><ele>224.3</ele><time>2026-09-28T15:02:10Z</time></trkpt>
+      <trkpt lat="40.114626" lon="-88.229012"><ele>224.9</ele><time>2026-09-28T15:02:20Z</time></trkpt>
+      <trkpt lat="40.113755" lon="-88.229015"><ele>224.2</ele><time>2026-09-28T15:02:30Z</time></trkpt>
+      <trkpt lat="40.112859" lon="-88.228977"><ele>224.7</ele><time>2026-09-28T15:02:40Z</time></trkpt>
+      <trkpt lat="40.111959" lon="-88.228971"><ele>222.9</ele><time>2026-09-28T15:02:50Z</time></trkpt>
+      <trkpt lat="40.111081" lon="-88.228985"><ele>223.0</ele><time>2026-09-28T15:03:00Z</time></trkpt>
+      <trkpt lat="40.110199" lon="-88.229028"><ele>224.5</ele><time>2026-09-28T15:03:10Z</time></trkpt>
+      <trkpt lat="40.110216" lon="-88.227790"><ele>225.1</ele><time>2026-09-28T15:03:20Z</time></trkpt>
+      <trkpt lat="40.110189" lon="-88.226577"><ele>224.3</ele><time>2026-09-28T15:03:30Z</time></trkpt>
+      <trkpt lat="40.110205" lon="-88.225386"><ele>225.0</ele><time>2026-09-28T15:03:40Z</time></trkpt>
+      <trkpt lat="40.110227" lon="-88.224179"><ele>224.5</ele><time>2026-09-28T15:03:50Z</time></trkpt>
+      <trkpt lat="40.110174" lon="-88.222960"><ele>224.4</ele><time>2026-09-28T15:04:00Z</time></trkpt>
+      <trkpt lat="40.110230" lon="-88.221747"><ele>223.4</ele><time>2026-09-28T15:04:10Z</time></trkpt>
+      <trkpt lat="40.110193" lon="-88.220551"><ele>222.6</ele><time>2026-09-28T15:04:20Z</time></trkpt>
+      <trkpt lat="40.110198" lon="-88.219375"><ele>222.9</ele><time>2026-09-28T15:04:30Z</time></trkpt>
+      <trkpt lat="40.110174" lon="-88.218134"><ele>222.9</ele><time>2026-09-28T15:04:40Z</time></trkpt>
+      <trkpt lat="40.110185" lon="-88.216951"><ele>225.1</ele><time>2026-09-28T15:04:50Z</time></trkpt>
+      <trkpt lat="40.110175" lon="-88.215742"><ele>224.1</ele><time>2026-09-28T15:05:00Z</time></trkpt>
+      <trkpt lat="40.110223" lon="-88.214514"><ele>225.1</ele><time>2026-09-28T15:05:10Z</time></trkpt>
+      <trkpt lat="40.110187" lon="-88.213333"><ele>223.6</ele><time>2026-09-28T15:05:20Z</time></trkpt>
+      <trkpt lat="40.110223" lon="-88.212095"><ele>223.0</ele><time>2026-09-28T15:05:30Z</time></trkpt>
+      <trkpt lat="40.110181" lon="-88.210933"><ele>223.2</ele><time>2026-09-28T15:05:40Z</time></trkpt>
+      <trkpt lat="40.110199" lon="-88.209706"><ele>223.3</ele><time>2026-09-28T15:05:50Z</time></trkpt>
+      <trkpt lat="40.110170" lon="-88.208510"><ele>223.6</ele><time>2026-09-28T15:06:00Z</time></trkpt>
+      <trkpt lat="40.110200" lon="-88.207300"><ele>224.2</ele><time>2026-09-28T15:06:10Z</time></trkpt>
+    </trkseg>
+  </trk>
+</gpx>
