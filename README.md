@@ -48,6 +48,18 @@ python -m scripts.demo_replay --speed 20 --min-distance 400 --category cafe
 
 按真实时间差除以 `speed` 逐点 sleep，每移动 `--min-distance` 米查一次周边 POI 并打印。未配置 Token 时只重放位置。
 
+## Week 2：Agent 讲解（Scout → Researcher → Writer → Checker）
+
+设计见 [docs/week-2-design.md](docs/week-2-design.md)。需要在 `.env` 中配置 `MAPBOX_ACCESS_TOKEN` 和 `DEEPSEEK_API_KEY`。
+
+```bash
+python -m scripts.run_tour                 # 默认几乎不等待；--speed 20 可按 20 倍速实时重放
+```
+
+- 打印每一段讲解（字数 / 预计时长 / 到达窗口 / 来源 URL）
+- `logs/run.jsonl`：每个决策一行（选中、behind、no_source、written、passed_check……），用于事后解释
+- `logs/scripts.json`：全部讲解，以及每句对应的事实编号和原文事实
+
 ## 测试
 
 ```bash

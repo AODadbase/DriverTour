@@ -21,6 +21,17 @@ class Settings(BaseSettings):
 
     sample_gpx_path: str = "data/sample.gpx"
 
+    # Week 2：LLM（DeepSeek）
+    deepseek_api_key: str = ""
+    deepseek_model: str = "deepseek-chat"
+    llm_temperature: float = 0.0
+    llm_timeout_s: float = 60.0
+
+    # Week 2：Wikipedia 要求描述性的 User-Agent，否则可能被拒绝
+    wikipedia_user_agent: str = "DriverTour/0.2 (student project; https://github.com/)"
+    # run_tour 查询的"地标类" Mapbox 分类，逗号分隔
+    landmark_categories: str = "museum,park,monument,historic_site,place_of_worship,university,theatre"
+
 
 @lru_cache
 def get_settings() -> Settings:
