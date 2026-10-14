@@ -6,6 +6,10 @@ gpxpy==1.6.2
 httpx==0.28.1
 python-multipart==0.0.20
 
+# week 2: agents
+langgraph==0.6.11
+langchain-deepseek==0.1.4
+
 # dev / test
 pytest==8.4.2
 respx==0.23.1

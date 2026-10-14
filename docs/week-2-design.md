@@ -127,7 +127,7 @@ g = StateGraph(TourState)
 g.add_edge(START, "scout")
 g.add_conditional_edges("scout",      lambda s: "researcher" if s.selected else END)
 g.add_conditional_edges("researcher", lambda s: "writer" if s.research else END)
-g.add_conditional_edges("writer",     lambda s: "checker" if s.script else END)
+g.add_conditional_edges("writer",     route_after_writer)      # 有 script→checker；输出无效且 write_attempts<2→writer；否则→END
 g.add_conditional_edges("checker",    route_after_check)   # 通过→END；不通过且 write_attempts<2→writer；否则→END
 ```
 
@@ -174,7 +174,7 @@ g.add_conditional_edges("checker",    route_after_check)   # 通过→END；不�
 - 输入给 LLM 的只有：地标名、编号后的事实列表、词数上限 `max_words = floor(window_s × 2.5)`、可能有的 Checker 反馈。
 - System prompt 规定：只能使用给出的事实，不得引入任何外部知识（包括年份、数字、形容词性评价）；每句话必须列出所依据的事实编号；第二人称、口语化。
 - 输出 `ScriptDraft { citations: List[Citation] }`，用 DeepSeek function calling 加 Pydantic 校验，`temperature = 0`。
-- 代码侧校验：句子非空；`fact_indices` 非空且都在 1..len(facts) 范围内。校验失败计为一次失败的写作尝试。
+- 代码侧校验：句子非空；`fact_indices` 非空且都在 1..len(facts) 范围内。校验失败或 LLM 调用出错计为一次失败的写作尝试（reason `bad_output`）：`write_attempts < 2` 时把错误写进 `feedback` 重写一次，否则放弃。
 - **超长处理**：如果总词数 > `max_words`，从末尾逐句删除，直到不超长（每句都独立有引用，所以删句不会破坏溯源）。如果连第一句都超长，就放弃，reason 记为 `too_long`。
 - `word_count`、`est_seconds`、`source_url`、`window_s` 全部由代码填写。
 
@@ -195,7 +195,7 @@ g.add_conditional_edges("checker",    route_after_check)   # 通过→END；不�
  "word_count": 41, "est_seconds": 16.4, "window_s": 23.5}
 ```
 
-- `reason` 取值：`selected`、`behind`、`already_narrated`、`already_skipped`、`out_of_range`、`too_close`、`researched`、`no_source`、`written`、`too_long`、`bad_output`、`passed_check`、`failed_check`、`retry`。
+- `reason` 取值：`selected`、`nothing_selected`、`behind`、`already_narrated`、`already_skipped`、`out_of_range`、`too_close`、`researched`、`no_source`、`written`、`too_long`、`bad_output`、`passed_check`、`failed_check`、`retry`。
 - Scout 的拒绝类日志**按 (地标, reason) 去重**：只有当某地标的拒绝原因发生变化时才写一行，避免每个 ping 都刷屏，但仍然能看出每个地标在什么时候、因为什么被跳过。
 - 不记录任何 API key。
 
